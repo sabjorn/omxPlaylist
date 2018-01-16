@@ -21,7 +21,7 @@ chmod u+x install.sh
 sudo ./install.sh
 ```
 
-## Uninstall
+### Uninstall
 To `uninstall`, run:
 
 ```
