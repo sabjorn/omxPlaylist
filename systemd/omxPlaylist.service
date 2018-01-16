@@ -1,0 +1,10 @@
+[Unit]
+Description=omxPlaylist
+After=multi-user.target
+
+[Service]
+Type=idle
+ExecStart=/usr/bin/omxPlaylist.py /media/omxPlaylist
+
+[Install]
+WantedBy=multi-user.target

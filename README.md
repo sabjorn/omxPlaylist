@@ -6,5 +6,36 @@ Also provided is the ability to use `systemd` to auto-boot the playlist and inst
 
 A secondary intention of this project is to provide a simple example of how to setup a Raspberry PI for use as a simple service provider (a video player). The files contained in this repo should be easy enough to modify in order to create any other type of service (e.g. DHCP server, MongoDB, APACHE web server).
 
-## Project Status
-This project is in early development. Much of the necessary code was lost and will be re-written from scratch.
+## Usage
+This project used `systemd` to start `omxPlaylist.py` at startup. However, if the `install` script is not used, `omxPlaylist.py` can be run directly with:
+
+```
+python3 omxPlaylist.py [video_dir]
+```
+
+### Install
+To `install`, run:
+
+```
+chmod u+x install.sh
+sudo ./install.sh
+```
+
+##$ Uninstall
+To `uninstall`, run:
+
+```
+chmod u+x install.sh
+sudo ./uninstall.sh
+```
+
+Importantly, the `omxPlaylist.service` (`systemd` service which runs the script at boot) is hardcoded to use the `/media/omxPlaylist` directory as the source for video files. Videos can be copied or symlinked to this directory to play. Alternatively, `systemd/omxPlaylist.service` can be modified, replacing:
+
+```
+/media/omxPlaylist
+```
+
+with whichever directory you wish to have your videos. Then, re-run the `install.sh` script.
+
+*Note*: For both `install.sh` and `uninstall.sh`, the `chmod` command is only required once.
+
