@@ -1,6 +1,9 @@
 # omxPlaylist
+## DEPRECATED
+[omplayer](https://github.com/popcornmix/omxplayer) has been deprecated since 2020 -- this project is now archived to match this.
+
 ## About
-This project is designed to provide a mechanism for playing groups of video files (a directory of files) in sequence (a playlist) using Python and [OMXPlayer](https://github.com/popcornmix/omxplayer). It is meant to be used on a Raspberry PI running Debian Linux.
+This project is designed to provide a mechanism for playing groups of video files (a directory of files) in sequence (a playlist) using Python and [omxplayer](https://github.com/popcornmix/omxplayer). It is meant to be used on a Raspberry PI running Debian Linux.
 
 Also provided is the ability to use `systemd` to auto-boot the playlist and install/uninstall scripts to make the setup easy.
 
